@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1566.0, -271.0, 464.0, 787.0 ],
+		"rect" : [ -766.0, 79.0, 467.0, 487.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,11 +39,23 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 138.0, 381.0, 112.0, 22.0 ],
+					"text" : "/cv 142."
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 186.0, 416.0, 104.0, 20.0 ],
+					"patching_rect" : [ 214.0, 416.0, 104.0, 20.0 ],
 					"text" : "Outgoing UDP"
 				}
 
@@ -219,8 +231,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 46.0, 416.0, 138.0, 22.0 ],
-					"text" : "udpsend 10.0.1.26 7770"
+					"patching_rect" : [ 46.0, 416.0, 151.0, 22.0 ],
+					"text" : "udpsend 192.168.1.5 7770"
 				}
 
 			}
@@ -263,6 +275,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-22", 0 ],
+					"order" : 1,
+					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 1 ],
+					"order" : 0,
 					"source" : [ "obj-32", 0 ]
 				}
 

@@ -19,6 +19,10 @@ Install in your Arduino libraries folder:
 1. Open the Boards Manager under Tools->Board->Boards Manager
 1. Search 'esp8266' and install
 
+### esp8266 USB Driver
+
+[Driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
+
 ### [esp8266-OSC](https://github.com/sandeepmistry/esp8266-OSC)
 
 1. Open the Arduino Library Manager under Sketch->Include Library->Manage Libraries
