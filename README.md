@@ -56,7 +56,7 @@ Writes the specified cv
 ## LFO
 Low-frequency oscillator with continuously variable *Ramp-Triangle-Ramp* shape
 
-##### OSC Messages
+#### OSC Messages
 `/rate <int/float>` sets the rate in Hz
 
 `/dutycycle <float>` sets the shape [0-1]
@@ -64,7 +64,7 @@ Low-frequency oscillator with continuously variable *Ramp-Triangle-Ramp* shape
 ## ADSR
 Attack/Decay/Sustain/Release Envelope Generator
 
-##### OSC Messages
+#### OSC Messages
 `/attack <int/float>` sets the attack time in miliseconds
 
 `/decay <int/float>` sets the decay time in miliseconds
