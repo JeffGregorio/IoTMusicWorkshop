@@ -24,6 +24,11 @@ Install in your Arduino libraries folder:
 1. Open the Arduino Library Manager under Sketch->Include Library->Manage Libraries
 1. Search 'esp8266-OSC' and install
 
+### [FixedPoints](https://github.com/Pharap/FixedPointsArduino)
+
+1. Open the Arduino Library Manager under Sketch->Include Library->Manage Libraries
+1. Search 'FixedPoints' and install
+
 ## Example Sketches (CV, LFO, ADSR, Sequencer)
 
 The first time you program the device, it will fail to connect to a network (none is specified by default), and open as an access point. You can then connect to it (check your list of WiFi networks for `ap-device-1`) using the password `iotconfig` to configure it with a network name, password, device identifier, node identifier, and port number.
