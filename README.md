@@ -36,7 +36,7 @@ To receive OSC from the device, use
 
 `[udpreceive <portnumber>]`
 
-##### OSC Messages
+#### OSC Messages
 `/config` causes the device to enter access point mode for configuration
 * Connect to it  using password `iotconfig`
 
@@ -44,7 +44,7 @@ To receive OSC from the device, use
 
 * Use this IP address to send OSC messages directly to specific devices
 
-##### Analog (PWM) Output
+#### Analog (PWM) Output
 Each example writes an 8-bit value [0-255] to pin D1, corresponding to [0-3.3] Volts.
 
 ## CV
@@ -56,7 +56,7 @@ Writes the specified cv
 ## LFO
 Low-frequency oscillator with continuously variable *Ramp-Triangle-Ramp* shape
 
-#### OSC Messages
+##### OSC Messages
 `/rate <int/float>` sets the rate in Hz
 
 `/dutycycle <float>` sets the shape [0-1]
@@ -64,7 +64,7 @@ Low-frequency oscillator with continuously variable *Ramp-Triangle-Ramp* shape
 ## ADSR
 Attack/Decay/Sustain/Release Envelope Generator
 
-#### OSC Messages
+##### OSC Messages
 `/attack <int/float>` sets the attack time in miliseconds
 
 `/decay <int/float>` sets the decay time in miliseconds
