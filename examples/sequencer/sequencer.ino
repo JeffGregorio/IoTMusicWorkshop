@@ -11,8 +11,6 @@ extern "C" {
 #include <LEDPin.h>
 #include <Sequencer.h>
 
-#define UDP_PORT 7770
-
 /* This pointer can point at the serial port if we're developing and debugging, or
  * NULL if we're done working and want to deploy without wasting time printing */
 //Stream *debug = &Serial;  // Use this for development
