@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1566.0, -271.0, 732.0, 787.0 ],
+		"rect" : [ 34.0, 79.0, 781.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -82,7 +82,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 168.0, 315.0, 120.0, 22.0 ],
-					"text" : "scale 0. 127. 5. 2000"
+					"text" : "scale 0. 127. 5. 1000"
 				}
 
 			}
@@ -106,7 +106,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 561.0, 395.5, 99.0, 22.0 ],
-					"text" : "/append 126"
+					"text" : "/append 121"
 				}
 
 			}
@@ -179,7 +179,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 298.0, 347.0, 213.0, 22.0 ],
-					"text" : "62 179 51 111 109 191 136 97"
+					"text" : "45 95 125 86 41 64 111 56"
 				}
 
 			}
@@ -349,7 +349,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 46.0, 315.0, 120.0, 22.0 ],
-					"text" : "scale 0. 127. 5. 2000"
+					"text" : "scale 0. 127. 5. 1000"
 				}
 
 			}
@@ -371,8 +371,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 46.0, 581.0, 138.0, 22.0 ],
-					"text" : "udpsend 10.0.1.26 7770"
+					"patching_rect" : [ 46.0, 581.0, 158.0, 22.0 ],
+					"text" : "udpsend 192.168.1.12 7770"
 				}
 
 			}
