@@ -1,37 +1,39 @@
 # IoT Music Workshop
 
-This codebase and example project set is designed to run on the ESP8266-based NodeMCU microcontroller and build using the Arduino IDE.
+This codebase and example project set is designed to run on the ESP8266-based [NodeMCU](https://www.amazon.com/s?k=nodemcu&ref=nb_sb_noss_1) microcontroller and build using the [Arduino IDE](https://www.arduino.cc/en/main/software). After programming the IoT devices, we control them with [Max/MSP](https://cycling74.com/).
 
-Install in your Arduino libraries folder:
+After installing the Arduino IDE and Max/MSP:
 
-### In OS X
-* /User/Documents/Arduino/libraries
-
-### In Windows 10
-* /Documents/My Documents/Arduino/Libraries
+1. Download this library using the green button near the upper right corner of this page (Clone or Download->Download Zip) 
+2. Install in your Arduino libraries folder
+	*  **In OS X**: `/User/Documents/Arduino/libraries`
+	* **In Windows 10** `/Documents/My Documents/Arduino/Libraries`
 
 ## Dependencies
 
 ### esp8266 boards package
 
 1. Open Arduino Preferences
-1. Under 'Additional Boards Manager URLs', enter http://arduino.esp8266.com/stable/package_esp8266com_index.json
+1. Under 'Additional Boards Manager URLs', enter the following URL: http://arduino.esp8266.com/stable/package_esp8266com_index.json
 1. Open the Boards Manager under Tools->Board->Boards Manager
 1. Search 'esp8266' and install
 
-### esp8266 USB Driver
+### [esp8266 USB Driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
 
-[Driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
+Note: OS X will block the installation of the driver, which you can enable (after begining the driver installation) in System Preferences->Security & Privacy.
+
 
 ### [esp8266-OSC](https://github.com/sandeepmistry/esp8266-OSC)
 
 1. Open the Arduino Library Manager under Sketch->Include Library->Manage Libraries
 1. Search 'esp8266-OSC' and install
+1. If the library doesn't appear, you can also download it manually from the library's Github page by using the above link.
 
 ### [FixedPoints](https://github.com/Pharap/FixedPointsArduino)
 
 1. Open the Arduino Library Manager under Sketch->Include Library->Manage Libraries
 1. Search 'FixedPoints' and install
+1. If the library doesn't appear, you can also download it manually from the library's Github page by using the above link.
 
 ## Example Sketches (CV, LFO, ADSR, Sequencer)
 
@@ -56,8 +58,12 @@ To receive OSC from the device, use
 #### Analog (PWM) Output
 Each example writes an 8-bit value [0-255] to pin D1, corresponding to [0-3.3] Volts.
 
+See the included slides for notes on building a simple reconstruction filter. You can send the CV output of this filter to a modular synthesizer by making a breadboard to 3.5mm audio cable adapter using a female 3.5mm [jack](https://www.amazon.com/3-5mm-Stereo-Female-terminal-connector/dp/B077XPSKQD/ref=sr_1_1?keywords=3.5mm+female+audio+jack&qid=1554317831&s=gateway&sr=8-1). 
+
+While the simple RC filter will work, the buffered version will help you avoid voltage drop, which is especially useful if you're trying to generate specific pitches. As noted in the slides, use a low voltage, rail-to-rail op amp like the dual [TLV2372](https://www.mouser.com/ProductDetail/Texas-Instruments/TLV2372IP?qs=sGAEpiMZZMtCHixnSjNA6P3Ssczg4flJKDjN5gpxXKE%3D) or quad [TLV2374](https://www.mouser.com/ProductDetail/Texas-Instruments/TLV2374IN?qs=sGAEpiMZZMtCHixnSjNA6KeLSdc1HUsPa9T7qjxWeeI%3D).
+
 ## CV
-Writes the specified cv
+Bare bones example; writes the specified cv
 
 ##### OSC Messages
 `/cv <int/float>` sets the value [0-255]
